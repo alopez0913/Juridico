@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FDED586-0F90-4ED6-81CA-4E3E020E2683}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Juridico</RootNamespace>
+    <AssemblyName>Juridico</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Juridico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Juridico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdsumTextboxAdvanced">
+      <HintPath>..\..\Componentes\AdsumTextboxAdvanced.dll</HintPath>
+    </Reference>
+    <Reference Include="ADSUMToolBar">
+      <HintPath>..\..\Componentes\ADSUMToolBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ADSUMXTRA_GRID">
+      <HintPath>..\..\Componentes\ADSUMXTRA_GRID.dll</HintPath>
+    </Reference>
+    <Reference Include="ArquitecturaGuarda">
+      <HintPath>..\..\Componentes\ArquitecturaGuarda.dll</HintPath>
+    </Reference>
+    <Reference Include="AsistenteDeDatos_Base">
+      <HintPath>..\..\Componentes\AsistenteDeDatos_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Catalogos">
+      <HintPath>..\..\Componentes\Catalogos.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\Componentes\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClsReportText">
+      <HintPath>..\..\Componentes\ClsReportText.dll</HintPath>
+    </Reference>
+    <Reference Include="Criptografo">
+      <HintPath>..\..\Componentes\Criptografo.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CustomExporta">
+      <HintPath>..\..\Componentes\CustomExporta.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMenuFormCS">
+      <HintPath>..\..\Componentes\CustomMenuFormCS.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.Charts.v14.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.Data.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.Printing.v14.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.Utils.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraBars.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraCharts.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2.UI, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraCharts.v14.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2.Wizard, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraCharts.v14.2.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraEditors.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraGrid.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraNavBar.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraPdfViewer.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraPrinting.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraScheduler.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DevExpress.XtraTreeList.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.CalcEngine">
+      <HintPath>..\..\Componentes\FarPoint.CalcEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Excel">
+      <HintPath>..\..\Componentes\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win">
+      <HintPath>..\..\Componentes\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread">
+      <HintPath>..\..\Componentes\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="ImpresionReportes">
+      <HintPath>..\..\Componentes\ImpresionReportes.dll</HintPath>
+    </Reference>
+    <Reference Include="IniFileController">
+      <HintPath>..\..\Componentes\IniFileController.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ManejadorXtraGridAdvanced">
+      <HintPath>..\..\Componentes\ManejadorXtraGridAdvanced.dll</HintPath>
+    </Reference>
+    <Reference Include="MetaCatalogo">
+      <HintPath>..\..\Componentes\MetaCatalogo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4420.1017\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PlantillaExpress">
+      <HintPath>..\..\Componentes\PlantillaExpress.dll</HintPath>
+    </Reference>
+    <Reference Include="QNCustomReport">
+      <HintPath>..\..\Componentes\QNCustomReport.dll</HintPath>
+    </Reference>
+    <Reference Include="QueryPrinterCS">
+      <HintPath>..\..\Componentes\QueryPrinterCS.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib">
+      <HintPath>..\..\Componentes\SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Tools">
+      <HintPath>..\..\Componentes\Tools.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\clsEnviarEmail.vb" />
+    <Compile Include="Clases\Controles\AdsumTextBoxAdvanced2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clases\Enumeradores\Enumeradores.vb" />
+    <Compile Include="Clases\EscribanoJuridicoArmando.vb" />
+    <Compile Include="Clases\Controles\RepositoryTextBoxItem.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clases\Enumeradores.vb" />
+    <Compile Include="Clases\EscribanoJuridicoAlejandro.vb" />
+    <Compile Include="Clases\EscribanoJuridico.vb" />
+    <Compile Include="Clases\EscribanoJuridicoIvan.vb" />
+    <Compile Include="Clases\EscribanoJuridicoJosue.vb" />
+    <Compile Include="Clases\EscribanoJuridicoLuisAngel.vb" />
+    <Compile Include="Clases\Extenciones.vb" />
+    <Compile Include="Clases\FabricaJuridico.vb" />
+    <Compile Include="Clases\FabricaJuridicoArmando.vb" />
+    <Compile Include="Clases\FabricaJuridicoIvan.vb" />
+    <Compile Include="Clases\FabricaJuridicoJosue.vb" />
+    <Compile Include="Clases\FabricaJuridicoLuisAngel.vb" />
+    <Compile Include="Clases\FabricaJuridicoAlejandro.vb" />
+    <Compile Include="Clases\Utilerias.vb" />
+    <Compile Include="Clases\Utilerias\FrmBarraProgreso.designer.vb">
+      <DependentUpon>FrmBarraProgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Utilerias\FrmBarraProgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BancoDatos\FrmM2702011.Designer.vb">
+      <DependentUpon>FrmM2702011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BancoDatos\FrmM2702011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BancoDatos\FrmM2702012.Designer.vb">
+      <DependentUpon>FrmM2702012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BancoDatos\FrmM2702012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BancoDatos\FrmM2702013.Designer.vb">
+      <DependentUpon>FrmM2702013.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BancoDatos\FrmM2702013.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701005.Designer.vb">
+      <DependentUpon>FrmM2701005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701005.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703001.Designer.vb">
+      <DependentUpon>FrmM2703001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701001.Designer.vb">
+      <DependentUpon>FrmM2701001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701002.Designer.vb">
+      <DependentUpon>FrmM2701002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701003.Designer.vb">
+      <DependentUpon>FrmM2701003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701004.Designer.vb">
+      <DependentUpon>FrmM2701004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogos\FrmM2701004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703002.Designer.vb">
+      <DependentUpon>FrmM2703002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703003.Designer.vb">
+      <DependentUpon>FrmM2703003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703004.Designer.vb">
+      <DependentUpon>FrmM2703004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FrmM2703004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVisualizarArchivos.Designer.vb">
+      <DependentUpon>FrmVisualizarArchivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVisualizarArchivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702001_CargaDocumentos.Designer.vb">
+      <DependentUpon>FrmM2702001_CargaDocumentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702001_CargaDocumentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702001_Old.Designer.vb">
+      <DependentUpon>FrmM2702001_Old.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702001_Old.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002_CambioFechas.Designer.vb">
+      <DependentUpon>FrmM2702002_CambioFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002_CambioFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002_Clasifica.Designer.vb">
+      <DependentUpon>FrmM2702002_Clasifica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002_Clasifica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002_Old.Designer.vb">
+      <DependentUpon>FrmM2702002_Old.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002_Old.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002.Designer.vb">
+      <DependentUpon>FrmM2702002.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702002.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702003.Designer.vb">
+      <DependentUpon>FrmM2702003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702003.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702004.Designer.vb">
+      <DependentUpon>FrmM2702004.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702004.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702005.Designer.vb">
+      <DependentUpon>FrmM2702005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702005.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702006.Designer.vb">
+      <DependentUpon>FrmM2702006.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702006.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702007.Designer.vb">
+      <DependentUpon>FrmM2702007.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702007.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702008.Designer.vb">
+      <DependentUpon>FrmM2702008.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702008.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702009.Designer.vb">
+      <DependentUpon>FrmM2702009.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702009.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702010.Designer.vb">
+      <DependentUpon>FrmM2702010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702001.Designer.vb">
+      <DependentUpon>FrmM2702001.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operaciones\FrmM2702001.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Clases\Utilerias\FrmBarraProgreso.resx">
+      <DependentUpon>FrmBarraProgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BancoDatos\FrmM2702011.resx">
+      <DependentUpon>FrmM2702011.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BancoDatos\FrmM2702012.resx">
+      <DependentUpon>FrmM2702012.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BancoDatos\FrmM2702013.resx">
+      <DependentUpon>FrmM2702013.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogos\FrmM2701005.resx">
+      <DependentUpon>FrmM2701005.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FrmM2703001.resx">
+      <DependentUpon>FrmM2703001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogos\FrmM2701001.resx">
+      <DependentUpon>FrmM2701001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogos\FrmM2701002.resx">
+      <DependentUpon>FrmM2701002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogos\FrmM2701003.resx">
+      <DependentUpon>FrmM2701003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogos\FrmM2701004.resx">
+      <DependentUpon>FrmM2701004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FrmM2703002.resx">
+      <DependentUpon>FrmM2703002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FrmM2703003.resx">
+      <DependentUpon>FrmM2703003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FrmM2703004.resx">
+      <DependentUpon>FrmM2703004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702001_CargaDocumentos.resx">
+      <DependentUpon>FrmM2702001_CargaDocumentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702001_Old.resx">
+      <DependentUpon>FrmM2702001_Old.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702002.resx">
+      <DependentUpon>FrmM2702002.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702002_CambioFechas.resx">
+      <DependentUpon>FrmM2702002_CambioFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702002_Clasifica.resx">
+      <DependentUpon>FrmM2702002_Clasifica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702003.resx">
+      <DependentUpon>FrmM2702003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702004.resx">
+      <DependentUpon>FrmM2702004.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702005.resx">
+      <DependentUpon>FrmM2702005.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702006.resx">
+      <DependentUpon>FrmM2702006.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702007.resx">
+      <DependentUpon>FrmM2702007.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operaciones\FrmM2702001.resx">
+      <DependentUpon>FrmM2702001.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
