@@ -9,7 +9,7 @@ Public Class clsEnviarEmail
     Private _Correo As String = "controldegastos"
     Private _Dominio As String = "@adelnor.com"
     Private _UsuarioCorreo As String = "apikey"
-    Private _Contraseña As String = "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" '"F#6yfgsPOp"
+    Private _Contraseña As String = My.Settings.PassSG '"F#6yfgsPOp"
 
     Private _Para As String = ""
     Private _ConCopia As String = ""
